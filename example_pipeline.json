@@ -1,0 +1,39 @@
+{
+    "nodes": {
+        "Start": {
+            "type": "DoNothing",
+            "next": ["FindAllTargets"]
+        },
+        "FindAllTargets": {
+            "type": "Custom",
+            "param": {
+                "custom_recognition": "MultiTemplateMatch",
+                "custom_recognition_param": {
+                    "template": "test_template",
+                    "threshold": 0.85,
+                    "method": 5,
+                    "max_results": 10
+                }
+            },
+            "next": ["ProcessResults"]
+        },
+        "ProcessResults": {
+            "type": "CustomAction",
+            "param": {
+                "custom_action": "ProcessMultiMatches",
+                "custom_action_param": {
+                    "min_score": 0.9
+                }
+            },
+            "next": ["End"]
+        },
+        "End": {
+            "type": "DoNothing"
+        }
+    },
+    "edges": {
+        "Start": ["FindAllTargets"],
+        "FindAllTargets": ["ProcessResults"],
+        "ProcessResults": ["End"]
+    }
+}
