@@ -1,192 +1,125 @@
 {
-    "启动影之诗": {
-        "action": {
-            "type": "StartApp",
-            "param": {
-                "package": "com.netease.yzs"
-            }
-        },
-        "next": "点击登录页"
-    },
-    "点击登录页": {
-        "on_error": "启动影之诗",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "登录页.png"
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target_offset": [
-                    200,
-                    200,
-                    100,
-                    100
-                ]
-            }
-        },
-        "next": "从主界面导航到换牌"
-    },
-    "从主界面导航到换牌": {
-        "on_error": "点击登录页",
-        "next": [
-            "点击对战菜单",
-            "点击随机对战",
-            "点击对战按钮",
-            "换牌决定",
-            "关闭广告"
-        ]
-    },
-    "关闭广告": {
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "关闭X.png"
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "点击对战菜单"
-        ]
-    },
-    "点击对战菜单": {
-        "on_error": "从主界面导航到换牌",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "金币.png",
-                    "水晶.png"
-                ]
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {
-                "target": [
-                    370,
-                    630,
-                    50,
-                    60
-                ]
-            }
-        },
-        "next": [
-            "点击随机对战"
-        ]
-    },
-    "点击随机对战": {
-        "timeout": 5000,
-        "on_error": "从主界面导航到换牌",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "随机对战.png"
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "点击对战按钮"
-        ]
-    },
-    "点击对战按钮": {
-        "on_error": "从主界面导航到换牌",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "对战.png"
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        },
-        "next": [
-            "换牌准备"
-        ]
-    },
-    "换牌准备": {
-        "on_error": "从主界面导航到换牌",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "决定.png"
-            }
-        },
-        "action": {
-            "type": "MultiSwipe",
-            "param": {
-                "swipes": [
-                    {
-                        "starting": 0,
-                        "begin": [
-                            250,
-                            450,
-                            50,
-                            50
-                        ],
-                        "end": [
-                            250,
-                            200,
-                            50,
-                            50
-                        ]
-                    },
-                    {
-                        "starting": 1000,
-                        "begin": [
-                            450,
-                            450,
-                            50,
-                            50
-                        ],
-                        "end": [
-                            450,
-                            200,
-                            50,
-                            50
-                        ]
-                    },
-                    {
-                        "starting": 2000,
-                        "begin": [
-                            650,
-                            450,
-                            50,
-                            50
-                        ],
-                        "end": [
-                            650,
-                            200,
-                            50,
-                            50
-                        ]
-                    },
-                    {
-                        "starting": 3000,
-                        "begin": [
-                            850,
-                            450,
-                            50,
-                            50
-                        ],
-                        "end": [
-                            850,
-                            200,
-                            50,
-                            50
-                        ]
-                    }
-                ]
-            }
-        }
-    }
+	"启动影之诗": {
+		"action": {
+			"type": "StartApp",
+			"param": {
+				"package": "com.netease.yzs"
+			}
+		},
+		"next": "点击登录页"
+	},
+	"点击登录页": {
+		"on_error": "启动影之诗",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "登录页.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target_offset": [200, 200, 100, 100]
+			}
+		},
+		"next": "从主界面导航到换牌"
+	},
+	"从主界面导航到换牌": {
+		"on_error": "点击登录页",
+		"next": ["点击对战菜单", "点击随机对战", "点击对战按钮", "换牌决定", "关闭广告"]
+	},
+	"关闭广告": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "关闭X.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"next": ["点击对战菜单"]
+	},
+	"点击对战菜单": {
+		"on_error": "从主界面导航到换牌",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["金币.png", "水晶.png"]
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target": [370, 630, 50, 60]
+			}
+		},
+		"next": ["点击随机对战"]
+	},
+	"点击随机对战": {
+		"timeout": 5000,
+		"on_error": "从主界面导航到换牌",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "随机对战.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"next": ["点击对战按钮"]
+	},
+	"点击对战按钮": {
+		"on_error": "从主界面导航到换牌",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "对战.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		},
+		"next": ["换牌准备"]
+	},
+	"换牌准备": {
+		"on_error": "从主界面导航到换牌",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "决定.png"
+			}
+		},
+		"action": {
+			"type": "MultiSwipe",
+			"param": {
+				"swipes": [
+					{
+						"starting": 0,
+						"begin": [250, 450, 50, 50],
+						"end": [250, 200, 50, 50]
+					},
+					{
+						"starting": 1000,
+						"begin": [450, 450, 50, 50],
+						"end": [450, 200, 50, 50]
+					},
+					{
+						"starting": 2000,
+						"begin": [650, 450, 50, 50],
+						"end": [650, 200, 50, 50]
+					},
+					{
+						"starting": 3000,
+						"begin": [850, 450, 50, 50],
+						"end": [850, 200, 50, 50]
+					}
+				]
+			}
+		}
+	}
 }

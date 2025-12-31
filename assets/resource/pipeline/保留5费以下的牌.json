@@ -1,164 +1,93 @@
 {
-    "保留5费以下的牌": {
-        "next": [
-            "保留5费以下的牌_0",
-            "保留5费以下的牌_1",
-            "保留5费以下的牌_2",
-            "保留5费以下的牌_3"
-        ]
-    },
-    "保留5费以下的牌_0": {
-        "timeout": 5000,
-        "on_error": "换牌决定",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "费用/1.png",
-                    "费用/2.png",
-                    "费用/3.png",
-                    "费用/4.png"
-                ],
-                "index": 0
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin_offset": [
-                    50,
-                    50,
-                    50,
-                    50
-                ],
-                "end_offset": [
-                    0,
-                    200,
-                    50,
-                    50
-                ]
-            }
-        },
-        "next": [
-            "保留5费以下的牌_1"
-        ]
-    },
-    "保留5费以下的牌_1": {
-        "timeout": 5000,
-        "on_error": "换牌决定",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "费用/1.png",
-                    "费用/2.png",
-                    "费用/3.png",
-                    "费用/4.png"
-                ],
-                "index": 1
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin_offset": [
-                    50,
-                    50,
-                    50,
-                    50
-                ],
-                "end_offset": [
-                    0,
-                    200,
-                    50,
-                    50
-                ]
-            }
-        },
-        "next": [
-            "保留5费以下的牌_2"
-        ]
-    },
-    "保留5费以下的牌_2": {
-        "timeout": 5000,
-        "on_error": "换牌决定",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "费用/1.png",
-                    "费用/2.png",
-                    "费用/3.png",
-                    "费用/4.png"
-                ],
-                "index": 2
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin_offset": [
-                    50,
-                    50,
-                    50,
-                    50
-                ],
-                "end_offset": [
-                    0,
-                    200,
-                    50,
-                    50
-                ]
-            }
-        },
-        "next": [
-            "保留5费以下的牌_3"
-        ]
-    },
-    "保留5费以下的牌_3": {
-        "timeout": 5000,
-        "on_error": "换牌决定",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": [
-                    "费用/1.png",
-                    "费用/2.png",
-                    "费用/3.png",
-                    "费用/4.png"
-                ],
-                "index": 3
-            }
-        },
-        "action": {
-            "type": "Swipe",
-            "param": {
-                "begin_offset": [
-                    50,
-                    50,
-                    50,
-                    50
-                ],
-                "end_offset": [
-                    0,
-                    200,
-                    50,
-                    50
-                ]
-            }
-        }
-    },
-    "换牌决定": {
-        "timeout": 5000,
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "template": "决定.png"
-            }
-        },
-        "action": {
-            "type": "Click",
-            "param": {}
-        }
-    }
+	"保留5费以下的牌": {
+		"next": ["保留5费以下的牌_0", "保留5费以下的牌_1", "保留5费以下的牌_2", "保留5费以下的牌_3"]
+	},
+	"保留5费以下的牌_0": {
+		"timeout": 5000,
+		"on_error": "换牌决定",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["费用/1.png", "费用/2.png", "费用/3.png", "费用/4.png"],
+				"index": 0
+			}
+		},
+		"action": {
+			"type": "Swipe",
+			"param": {
+				"begin_offset": [50, 50, 50, 50],
+				"end_offset": [0, 200, 50, 50]
+			}
+		},
+		"next": ["保留5费以下的牌_1"]
+	},
+	"保留5费以下的牌_1": {
+		"timeout": 5000,
+		"on_error": "换牌决定",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["费用/1.png", "费用/2.png", "费用/3.png", "费用/4.png"],
+				"index": 1
+			}
+		},
+		"action": {
+			"type": "Swipe",
+			"param": {
+				"begin_offset": [50, 50, 50, 50],
+				"end_offset": [0, 200, 50, 50]
+			}
+		},
+		"next": ["保留5费以下的牌_2"]
+	},
+	"保留5费以下的牌_2": {
+		"timeout": 5000,
+		"on_error": "换牌决定",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["费用/1.png", "费用/2.png", "费用/3.png", "费用/4.png"],
+				"index": 2
+			}
+		},
+		"action": {
+			"type": "Swipe",
+			"param": {
+				"begin_offset": [50, 50, 50, 50],
+				"end_offset": [0, 200, 50, 50]
+			}
+		},
+		"next": ["保留5费以下的牌_3"]
+	},
+	"保留5费以下的牌_3": {
+		"timeout": 5000,
+		"on_error": "换牌决定",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["费用/1.png", "费用/2.png", "费用/3.png", "费用/4.png"],
+				"index": 3
+			}
+		},
+		"action": {
+			"type": "Swipe",
+			"param": {
+				"begin_offset": [50, 50, 50, 50],
+				"end_offset": [0, 200, 50, 50]
+			}
+		}
+	},
+	"换牌决定": {
+		"timeout": 5000,
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "决定.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	}
 }
