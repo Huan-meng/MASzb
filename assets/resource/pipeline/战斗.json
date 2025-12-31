@@ -1,0 +1,18 @@
+{
+    "识别我方回合": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "我方回合.png"
+            }
+        }
+    },
+    "识别对手回合": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": "对手回合.png"
+            }
+        }
+    }
+}
