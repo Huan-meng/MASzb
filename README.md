@@ -6,9 +6,13 @@
 # MAASzb
 
 一款影之诗超凡世界小助手
+
 绝赞更新中 ✿✿ヽ(°▽°)ノ✿
+
 由 [MaaFramework](https://github.com/MaaXYZ/MaaFramework) 强力驱动！  
+
 <a href="https://github.com/Huan-meng/MAASzb" target="_blank" style="font-weight: bold;">🔗 本项目 GitHub 仓库</a><br>
+
 🌟喜欢本项目就在仓库右上角点个星星吧🌟
 
 </div>
