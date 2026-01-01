@@ -43,11 +43,28 @@
 	"task": [
 		{
 			"name": "开始挂机对战",
-			"entry": "启动影之诗"
-		},
-		{
-			"name": "抽取每日免费卡包",
-			"entry": "关闭"
+			"entry": "启动影之诗",
+			"option": ["换牌策略"]
 		}
-	]
+	],
+	"option": {
+		"换牌策略": {
+			"type": "select",
+			"label": "$选择换牌策略",
+			"description": "选择要使用的换牌策略",
+			"default_case": "保留5费以下的牌",
+			"cases": [
+				{
+					"name": "保留5费以下的牌",
+					"label": "保留5费以下的牌",
+					"description": "保留5费以下的牌",
+					"pipeline_override": {
+						"换牌准备": {
+							"next": "保留5费以下的牌"
+						}
+					}
+				}
+			]
+		}
+	}
 }

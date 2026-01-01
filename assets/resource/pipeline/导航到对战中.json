@@ -7,7 +7,7 @@
 				"package": "com.netease.yzs"
 			}
 		},
-		"next": "点击登录页"
+		"next": "判断状态"
 	},
 	"点击登录页": {
 		"on_error": "启动影之诗",
@@ -44,15 +44,12 @@
 			"[JumpBack]点击对战菜单",
 			"[JumpBack]点击随机对战",
 			"[JumpBack]点击对战按钮",
-			"[JumpBack]换牌决定",
-			"[JumpBack]关闭广告",
+			"[JumpBack]换牌准备",
+			"[JumpBack]关闭",
 			"[JumpBack]抽取每日免费卡包",
 			"[JumpBack]识别我方回合",
 			"[JumpBack]识别对手回合"
 		]
-	},
-	"关闭广告": {
-		"next": ["[JumpBack]关闭"]
 	},
 	"点击对战菜单": {
 		"recognition": {
@@ -67,8 +64,7 @@
 			"param": {
 				"target": [370, 630, 50, 60]
 			}
-		},
-		"next": ["点击随机对战"]
+		}
 	},
 	"点击随机对战": {
 		"timeout": 5000,
@@ -81,8 +77,7 @@
 		"action": {
 			"type": "Click",
 			"param": {}
-		},
-		"next": ["点击对战按钮"]
+		}
 	},
 	"点击对战按钮": {
 		"recognition": {
@@ -94,8 +89,7 @@
 		"action": {
 			"type": "Click",
 			"param": {}
-		},
-		"next": ["换牌准备"]
+		}
 	},
 	"换牌准备": {
 		"recognition": {
