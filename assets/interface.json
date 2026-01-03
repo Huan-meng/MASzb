@@ -14,7 +14,7 @@
 	"version": "1.0.0",
 	// Mirror酱为第三方分发服务，新项目默认关闭
 	// 若有需要请联系 Mirror酱 开通，直接自行开启是无法使用的
-	// "mirrorchyan_rid": "MaaXXX",
+	// "mirrorchyan_rid": "MaaSzb",
 	// "mirrorchyan_multiplatform": true,
 	"controller": [
 		{
@@ -42,15 +42,20 @@
 	// },
 	"task": [
 		{
-			"name": "开始挂机对战",
+			"name": "导航到主界面",
 			"entry": "启动影之诗",
+			"option": ["是否抽取每日免费卡包"]
+		},
+		{
+			"name": "开始挂机对战",
+			"entry": "导航到对战",
 			"option": ["换牌策略"]
 		}
 	],
 	"option": {
 		"换牌策略": {
 			"type": "select",
-			"label": "$选择换牌策略",
+			"label": "选择换牌策略",
 			"description": "选择要使用的换牌策略",
 			"default_case": "保留5费以下的牌",
 			"cases": [
@@ -63,6 +68,35 @@
 							"next": "保留5费以下的牌"
 						}
 					}
+				}
+			]
+		},
+		"是否抽取每日免费卡包": {
+			"type": "switch",
+			"label": "是否抽取每日免费卡包",
+			"description": "是否抽取每日免费卡包",
+			"default_case": "Yes",
+			"cases": [
+				{
+					"name": "Yes",
+					"label": "是",
+					"description": "是",
+					"pipeline_override": {
+						"抽取每日免费卡包": {
+							"action": {
+								"type": "Click",
+								"param": {
+									"target_offset": [0, 300, 0, 0]
+								}
+							},
+							"next": ["登录奖励免费购买"]
+						}
+					}
+				},
+				{
+					"name": "No",
+					"label": "否",
+					"description": "否"
 				}
 			]
 		}

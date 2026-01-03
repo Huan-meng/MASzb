@@ -1,0 +1,47 @@
+{
+	"启动影之诗": {
+		"on_error": ["启动影之诗"],
+		"action": {
+			"type": "StartApp",
+			"param": {
+				"package": "com.netease.yzs"
+			}
+		},
+		"next": "导航到主界面"
+	},
+	"点击登录页": {
+		"on_error": "启动影之诗",
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "登录页.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {
+				"target_offset": [500, -200, 200, 200]
+			}
+		}
+	},
+	"主界面检测": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": ["金币.png", "水晶.png"]
+			}
+		}
+	},
+	"导航到主界面": {
+		"next": [
+			"[JumpBack]是",
+			"[JumpBack]返回标题画面",
+			"[JumpBack]关闭X",
+			"[JumpBack]重试",
+			"[JumpBack]关闭",
+			"[JumpBack]点击登录页",
+			"抽取每日免费卡包",
+			"主界面检测"
+		]
+	}
+}

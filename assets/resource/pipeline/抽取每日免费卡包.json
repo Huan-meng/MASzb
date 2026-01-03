@@ -6,14 +6,7 @@
 			"param": {
 				"template": "每日卡包/每日免费卡包.png"
 			}
-		},
-		"action": {
-			"type": "Click",
-			"param": {
-				"target_offset": [0, 300, 0, 0]
-			}
-		},
-		"next": ["登录奖励免费购买"]
+		}
 	},
 	"登录奖励免费购买": {
 		"recognition": {
@@ -39,6 +32,6 @@
 			"type": "Click",
 			"param": {}
 		},
-		"next": ["[JumpBack]跳过", "[JumpBack]关闭"]
+		"next": ["[JumpBack]跳过", "[JumpBack]关闭X"]
 	}
 }

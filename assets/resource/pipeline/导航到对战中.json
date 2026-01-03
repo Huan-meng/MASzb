@@ -1,52 +1,10 @@
 {
-	"启动影之诗": {
-		"on_error": ["启动影之诗"],
-		"action": {
-			"type": "StartApp",
-			"param": {
-				"package": "com.netease.yzs"
-			}
-		},
-		"next": "判断状态"
-	},
-	"点击登录页": {
-		"on_error": "启动影之诗",
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"template": "登录页.png"
-			}
-		},
-		"action": {
-			"type": "Click",
-			"param": {
-				"target_offset": [500, -200, 200, 200]
-			}
-		}
-	},
-	"点击确认窗口": {
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"template": "是.png",
-				"threshold": 0.8
-			}
-		},
-		"action": {
-			"type": "Click",
-			"param": {}
-		}
-	},
-	"判断状态": {
+	"导航到对战": {
 		"next": [
-			"[JumpBack]点击确认窗口",
-			"[JumpBack]点击登录页",
-			"[JumpBack]点击对战菜单",
-			"[JumpBack]点击随机对战",
 			"[JumpBack]点击对战按钮",
+			"[JumpBack]点击随机对战",
+			"[JumpBack]点击对战菜单",
 			"[JumpBack]换牌准备",
-			"[JumpBack]关闭",
-			"[JumpBack]抽取每日免费卡包",
 			"[JumpBack]识别我方回合",
 			"[JumpBack]识别对手回合"
 		]

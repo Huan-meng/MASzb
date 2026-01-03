@@ -1,9 +1,10 @@
 {
-	"关闭": {
+	"关闭X": {
 		"recognition": {
 			"type": "TemplateMatch",
 			"param": {
-				"template": "通用/关闭X.png"
+				"template": "通用/关闭X.png",
+				"threshold": 0.8
 			}
 		},
 		"action": {
@@ -17,6 +18,55 @@
 			"type": "TemplateMatch",
 			"param": {
 				"template": "通用/跳过.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"是": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "通用/是.png",
+				"threshold": 0.8
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"重试": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "通用/重试.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"返回标题画面": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "通用/返回标题画面.png"
+			}
+		},
+		"action": {
+			"type": "Click",
+			"param": {}
+		}
+	},
+	"关闭": {
+		"recognition": {
+			"type": "TemplateMatch",
+			"param": {
+				"template": "通用/关闭.png"
 			}
 		},
 		"action": {
