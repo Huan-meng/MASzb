@@ -13,7 +13,7 @@
 		"recognition": {
 			"type": "TemplateMatch",
 			"param": {
-				"template": ["金币.png", "水晶.png"],
+				"template": ["主界面/金币.png", "主界面/水晶.png"],
 				"threshold": 0.8
 			}
 		},
@@ -29,7 +29,7 @@
 		"recognition": {
 			"type": "TemplateMatch",
 			"param": {
-				"template": "随机对战.png"
+				"template": "对战/随机对战.png"
 			}
 		},
 		"action": {
@@ -41,47 +41,12 @@
 		"recognition": {
 			"type": "TemplateMatch",
 			"param": {
-				"template": "对战.png"
+				"template": "对战/对战.png"
 			}
 		},
 		"action": {
 			"type": "Click",
 			"param": {}
-		}
-	},
-	"换牌准备": {
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"template": "决定.png"
-			}
-		},
-		"action": {
-			"type": "MultiSwipe",
-			"param": {
-				"swipes": [
-					{
-						"starting": 0,
-						"begin": [250, 450, 50, 50],
-						"end": [250, 200, 50, 50]
-					},
-					{
-						"starting": 1000,
-						"begin": [450, 450, 50, 50],
-						"end": [450, 200, 50, 50]
-					},
-					{
-						"starting": 2000,
-						"begin": [650, 450, 50, 50],
-						"end": [650, 200, 50, 50]
-					},
-					{
-						"starting": 3000,
-						"begin": [850, 450, 50, 50],
-						"end": [850, 200, 50, 50]
-					}
-				]
-			}
 		}
 	}
 }

@@ -3,7 +3,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "我方回合.png"
+                "template": "对战/我方回合.png"
             }
         }
     },
@@ -11,7 +11,7 @@
         "recognition": {
             "type": "TemplateMatch",
             "param": {
-                "template": "对手回合.png"
+                "template": "对战/对手回合.png"
             }
         }
     }

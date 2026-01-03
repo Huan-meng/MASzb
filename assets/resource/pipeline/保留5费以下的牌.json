@@ -17,18 +17,5 @@
 				"end_offset": [0, 200, 50, 50]
 			}
 		}
-	},
-	"换牌决定": {
-		"post_wait_freezes": 2000,
-		"recognition": {
-			"type": "TemplateMatch",
-			"param": {
-				"template": "决定.png"
-			}
-		},
-		"action": {
-			"type": "Click",
-			"param": {}
-		}
 	}
 }
