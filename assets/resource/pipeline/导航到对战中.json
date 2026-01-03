@@ -10,6 +10,7 @@
 		]
 	},
 	"点击对战菜单": {
+		"post_wait_freezes": 2000,
 		"recognition": {
 			"type": "TemplateMatch",
 			"param": {
